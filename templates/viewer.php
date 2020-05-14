@@ -27,15 +27,15 @@ Adobe CMap resources are covered by their own copyright but the same license:
 See https://github.com/adobe-type-tools/cmap-resources
 -->
 <html dir="ltr" mozdisallowselectionprint>
-  <head data-workersrc="<?php p($urlGenerator->linkTo('files_pdfviewer', 'vendor/pdfjs/build/pdf.worker.js')) ?>?v=<?php p($version) ?>"
-        data-cmapurl="<?php p($urlGenerator->linkTo('files_pdfviewer', 'vendor/pdfjs/web/cmaps/')) ?>">
+  <head data-workersrc="<?php p($urlGenerator->linkTo('files_pdfviewer', 'vendor/pdf.js-hypothes.is/viewer/build/pdf.worker.js')) ?>?v=<?php p($version) ?>"
+        data-cmapurl="<?php p($urlGenerator->linkTo('files_pdfviewer', 'vendor/pdf.js-hypothes.is/viewer/web/cmaps/')) ?>">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="google" content="notranslate">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>PDF.js viewer</title>
 
-    <link rel="stylesheet" href="<?php p($urlGenerator->linkTo('files_pdfviewer', 'vendor/pdfjs/web/viewer.css')) ?>?v=<?php p($version) ?>"/>
+    <link rel="stylesheet" href="<?php p($urlGenerator->linkTo('files_pdfviewer', 'vendor/pdf.js-hypothes.is/viewer/web/viewer.css')) ?>?v=<?php p($version) ?>"/>
     <link rel="stylesheet" href="<?php p($urlGenerator->linkTo('files_pdfviewer', 'css/viewer.css')) ?>?v=<?php p($version) ?>"/>
     <?php if($_['minmode']):?>
       <link rel="stylesheet" href="<?php p($urlGenerator->linkTo('files_pdfviewer', 'css/minmode.css')) ?>?v=<?php p($version) ?>"/>
@@ -43,9 +43,9 @@ See https://github.com/adobe-type-tools/cmap-resources
 
 
     <!-- This snippet is used in production (included from viewer.html) -->
-    <link rel="resource" type="application/l10n" href="<?php p($urlGenerator->linkTo('files_pdfviewer', 'vendor/pdfjs/web/locale/locale.properties')) ?>?v=<?php p($version) ?>"/>
-    <script nonce="<?php p(\OC::$server->getContentSecurityPolicyNonceManager()->getNonce()) ?>" src="<?php p($urlGenerator->linkTo('files_pdfviewer', 'vendor/pdfjs/build/pdf.js')) ?>?v=<?php p($version) ?>"></script>
-    <script nonce="<?php p(\OC::$server->getContentSecurityPolicyNonceManager()->getNonce()) ?>" src="<?php p($urlGenerator->linkTo('files_pdfviewer', 'vendor/pdfjs/web/viewer.js')) ?>?v=<?php p($version) ?>"></script>
+    <link rel="resource" type="application/l10n" href="<?php p($urlGenerator->linkTo('files_pdfviewer', 'vendor/pdf.js-hypothes.is/viewer/web/locale/locale.properties')) ?>?v=<?php p($version) ?>"/>
+    <script nonce="<?php p(\OC::$server->getContentSecurityPolicyNonceManager()->getNonce()) ?>" src="<?php p($urlGenerator->linkTo('files_pdfviewer', 'vendor/pdf.js-hypothes.is/viewer/build/pdf.js')) ?>?v=<?php p($version) ?>"></script>
+    <script nonce="<?php p(\OC::$server->getContentSecurityPolicyNonceManager()->getNonce()) ?>" src="<?php p($urlGenerator->linkTo('files_pdfviewer', 'vendor/pdf.js-hypothes.is/viewer/web/viewer.js')) ?>?v=<?php p($version) ?>"></script>
     <script nonce="<?php p(\OC::$server->getContentSecurityPolicyNonceManager()->getNonce()) ?>" src="<?php p($urlGenerator->linkTo('files_pdfviewer', 'js/workersrc.js')) ?>?v=<?php p($version) ?>"></script>
   </head>
 
