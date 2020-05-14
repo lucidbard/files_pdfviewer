@@ -47,6 +47,7 @@ See https://github.com/adobe-type-tools/cmap-resources
     <script nonce="<?php p(\OC::$server->getContentSecurityPolicyNonceManager()->getNonce()) ?>" src="<?php p($urlGenerator->linkTo('files_pdfviewer', 'vendor/pdf.js-hypothes.is/viewer/build/pdf.js')) ?>?v=<?php p($version) ?>"></script>
     <script nonce="<?php p(\OC::$server->getContentSecurityPolicyNonceManager()->getNonce()) ?>" src="<?php p($urlGenerator->linkTo('files_pdfviewer', 'vendor/pdf.js-hypothes.is/viewer/web/viewer.js')) ?>?v=<?php p($version) ?>"></script>
     <script nonce="<?php p(\OC::$server->getContentSecurityPolicyNonceManager()->getNonce()) ?>" src="<?php p($urlGenerator->linkTo('files_pdfviewer', 'js/workersrc.js')) ?>?v=<?php p($version) ?>"></script>
+    <script nonce="<?php p(\OC::$server->getContentSecurityPolicyNonceManager()->getNonce()) ?>" src="<?php p($urlGenerator->linkTo('files_pdfviewer', 'vendor/pdf.js-hypothes.is/pdfjs-init.js')) ?>?v=<?php p($version) ?>"></script>
   </head>
 
   <body tabindex="1" class="loadingInProgress">

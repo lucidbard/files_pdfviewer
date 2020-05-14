@@ -13,6 +13,7 @@ namespace OCA\Files_PdfViewer\Controller;
 
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http\ContentSecurityPolicy;
+use OCP\AppFramework\Http\EmptyContentSecurityPolicy;
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\IRequest;
 use OCP\IURLGenerator;
@@ -48,9 +49,19 @@ class DisplayController extends Controller {
 		];
 		$response = new TemplateResponse($this->appName, 'viewer', $params, 'blank');
 
-		$policy = new ContentSecurityPolicy();
+		$policy = new EmptyContentSecurityPolicy();
 		$policy->addAllowedChildSrcDomain('\'self\'');
+		$policy->addAllowedChildSrcDomain('hypothes.is');
 		$policy->addAllowedFontDomain('data:');
+		$policy->addAllowedConnectDomain('*.hypothes.is');
+		$policy->addAllowedConnectDomain('\'self\'');
+		$policy->addAllowedScriptDomain('*.hypothes.is');
+		$policy->addAllowedScriptDomain('hypothes.is');
+		$policy->addAllowedScriptDomain('\'self\'');
+		$policy->addAllowedScriptDomain('\'unsafe-eval\'');
+		$policy->addAllowedStyleDomain('\'unsafe-inline\'');
+		$policy->addAllowedStyleDomain('\'self\'');
+		$policy->addAllowedStyleDomain('*.hypothes.is');
 		$policy->addAllowedImageDomain('*');
 		$policy->allowEvalScript(false);
 		$response->setContentSecurityPolicy($policy);
