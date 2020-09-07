@@ -59,7 +59,9 @@ class DisplayController extends Controller {
 		$policy->addAllowedScriptDomain('hypothes.is');
 		$policy->addAllowedScriptDomain('\'self\'');
 		$policy->addAllowedScriptDomain('\'unsafe-eval\'');
+		$policy->addAllowedScriptDomain('data:');
 		$policy->addAllowedStyleDomain('\'unsafe-inline\'');
+		$policy->addAllowedStyleDomain('data:');
 		$policy->addAllowedStyleDomain('\'self\'');
 		$policy->addAllowedStyleDomain('*.hypothes.is');
 		$policy->addAllowedImageDomain('*');
